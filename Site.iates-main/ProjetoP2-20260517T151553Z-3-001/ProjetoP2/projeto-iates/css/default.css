@@ -300,19 +300,22 @@ main {
 
 /* FORMULÁRIO */
 
+```css
+/* contato */
+
+/* FORMULÁRIO */
+
 form {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     padding: 30px;
 
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background-color: var(--darkblue);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
 
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
 /* CAMPOS */
@@ -336,27 +339,27 @@ form label {
     cursor: text;
 }
 
-/* INPUTS E TEXTAREA */
+/* INPUTS */
 
 #nome,
 #email,
 textarea {
     width: 100%;
 
-    padding: 15px 18px;
+    padding: 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
+    border: 1px solid #3b454d;
+    border-radius: 10px;
 
     outline: none;
 
-    background: rgba(255, 255, 255, 0.04);
+    background-color: #2d353b;
 
     color: white;
-    font-size: 0.95em;
+
     font-family: var(--pagefont);
 
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 /* TEXTAREA */
@@ -365,6 +368,66 @@ textarea {
     resize: none;
     min-height: 140px;
 }
+
+/* PLACEHOLDER */
+
+#nome::placeholder,
+#email::placeholder,
+textarea::placeholder {
+    color: #b8b8b8;
+}
+
+/* FOCUS */
+
+#nome:focus,
+#email:focus,
+textarea:focus {
+    border-color: var(--ocher);
+
+    box-shadow: 0 0 10px rgba(198, 176, 127, 0.4);
+}
+
+/* BOTÕES */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* BOTÃO */
+
+.button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--ocher);
+
+    color: var(--darkblue);
+
+    font: normal 700 0.85em var(--pagefont);
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+
+.button:hover {
+    background-color: var(--lightblue);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+```
+
 
 /* PLACEHOLDER */
 
