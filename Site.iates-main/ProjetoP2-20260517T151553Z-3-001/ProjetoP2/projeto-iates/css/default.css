@@ -298,61 +298,154 @@ main {
 
 /* contato */
 
+/* FORMULÁRIO */
+
 form {
-    padding: 0 10px 20px;
-    max-width: 400px;
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
 }
+
+/* CAMPOS */
 
 form div {
-    padding: 7px;
+    margin-bottom: 22px;
 }
+
+/* LABELS */
 
 form label {
-    font: normal 700 0.8em var(--pagefont);
-    color: var(--ocher);
-    cursor: text;
+    display: block;
+    margin-bottom: 10px;
+
+    font: normal 700 0.78em var(--pagefont);
+    letter-spacing: 1px;
     text-transform: uppercase;
+
+    color: var(--ocher);
+
+    cursor: text;
 }
 
-#nome, #email {
-    width: 100%;
-    padding: 5px;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid;
-    font-family: var(--pagefont);
-}
+/* INPUTS E TEXTAREA */
 
+#nome,
+#email,
 textarea {
     width: 100%;
-    resize: none;
-    margin-top: 3px;
-    padding: 5px;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid;
+
+    padding: 15px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: white;
+    font-size: 0.95em;
     font-family: var(--pagefont);
+
+    transition: 0.3s ease;
 }
+
+/* TEXTAREA */
+
+textarea {
+    resize: none;
+    min-height: 140px;
+}
+
+/* PLACEHOLDER */
+
+#nome::placeholder,
+#email::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* EFEITO FOCUS */
+
+#nome:focus,
+#email:focus,
+textarea:focus {
+    border-color: var(--ocher);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+/* BOTÕES */
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
 }
+
+/* BOTÃO */
 
 .button {
-    padding: 10px 20px;
+    width: 100%;
+
+    padding: 16px 20px;
+
     border: none;
-    font: normal 600 0.7em var(--pagefont);
-    background-color: var(--darkblue);
-    color: white;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--ocher),
+        #f3cd58
+    );
+
+    color: var(--darkblue);
+
+    font: normal 700 0.85em var(--pagefont);
+
+    letter-spacing: 1px;
     text-transform: uppercase;
-    transition: 0.3s;
+
+    cursor: pointer;
+
+    transition: 0.35s ease;
 }
 
+/* HOVER */
+
 .button:hover {
-    background-color: var(--box);
-    cursor: pointer;
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.35);
+
+    filter: brightness(1.05);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    form {
+        padding: 25px 20px;
+    }
+
+    .button {
+        padding: 14px;
+        font-size: 0.8em;
+    }
 }
 
 /* footer */
